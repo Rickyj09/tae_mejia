@@ -11,7 +11,7 @@ app = Flask(__name__)
 mail = Mail() 
 server = smtplib.SMTP('smtp.gmail.com',587)
 server.starttls()
-server.login('jerez.ricardo09@gmail.com', 'CrsbRc@2021')
+server.login('mm.systemquito@gmail.com', 'md3n8m79@2021')
 
 
 #setting
@@ -20,8 +20,8 @@ MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = 587
 MAIL_USE_SSL = False
 MAIL_USE_TLS = True
-MAIL_USERNAME = 'jerez.ricardo09@gmail.com'
-MAIL_PASSWORD = 'CrsbRc@2021'
+MAIL_USERNAME = 'mm.systemquito@gmail.com'
+MAIL_PASSWORD = 'md3n8m79@2021'
 
 
 # routes
@@ -44,7 +44,7 @@ def envia_mail():
         email = request.form['email']
         mensaje = request.form['mensaje']
         mensaje1 = 'Subject: {}\n\n{}'.format(email,nom)
-        server.sendmail("jerez.ricardo09@gmail.com", "jerez_ricardo9@hotmail.com", mensaje1, mensaje)
+        server.sendmail("mm.systemquito@gmail.com", "jerez_ricardo9@hotmail.com", mensaje1, mensaje)
         server.quit()
         return redirect( url_for('home'))
 
